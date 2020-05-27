@@ -9,7 +9,7 @@ jhonny-grbl can be used in 3 ways:
 
 - **Proxy mode**. The most interesting part: Grbl usually is installed in arduino UNO with limited I/O ports. Although what he does he does very well, in real professional machines you surely need much more I/O ports and you need extend the logic to its machine concrete aspects (more tools, more sensors, etc). You would need a professional controller with posibility of extending I/Os which is much more expensive $$$$$...
 
-> Yes, you can install grbl on a mega board with many more ports, but still they may not be enough, and furthermore, it is very  difficult to take advantage of unused ports because it would require mixing your logic with the grbl internals. Without a doubt, if it is working well, it's not worth getting tangled up inside.
+> Yes, you can install grbl on a mega board with many more ports, but still it may not be enough, and furthermore, it is very  difficult to take advantage of unused ports because it would require mixing your logic with the grbl internals. Without a doubt, if it is working well, it's not worth getting tangled up inside.
 
    In proxy mode, jhonny-grbl stays in the middle, between the host program and the real grbl board. You can control all messages sended and received between the parts and extend the control logic with other arduino boards, all programmed in high level language (javascript). Examples of use:
     - Custom external automatic tool change by using another arduino board as you need.
