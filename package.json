@@ -1,5 +1,5 @@
 {
-  "name": "jhonny-grbl",
+  "name": "@jmdevall/jhonny-grbl",
   "version": "1.0.0",
   "description": "control mock and proxy grbl controller in javascript",
   "main": "lib/index.js",
@@ -29,6 +29,7 @@
   },
   
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "files": ["lib/**/*"]
+
 }
