@@ -2,8 +2,6 @@
   "name": "@jmdevall/jhonny-grbl",
   "version": "1.0.0",
   "description": "control mock and proxy grbl controller in javascript",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@babel/preset-env": "^7.9.6",
