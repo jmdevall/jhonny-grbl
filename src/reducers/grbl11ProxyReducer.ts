@@ -1,7 +1,19 @@
-import hostInReducer, { initialState as initialHostIn, HostInAction, HostInState } from './hostInReducer';
-import hostOutReducer, { initialState as initialHostOut, HostOutAction, HostOutState } from './hostOutReducer';
-import grblInReducer, { initialState as initialGrblIn, GrblInAction, GrblInState } from './grblInReducer';
-import grblOutReducer, { initialState as initialGrblOut, GrblOutAction, GrblOutState } from './grblOutReducer';
+import hostInReducer, {
+  initialState as initialHostIn, HostInState, HostInAction,
+  hostIn, hostInBlockConsumed, hostInRtcConsumed
+} from './hostInReducer';
+import hostOutReducer, {
+  initialState as initialHostOut, HostOutState, HostOutAction,
+  hostOutSend, hostOutBufferConsumed 
+} from './hostOutReducer';
+import grblInReducer, { 
+  initialState as initialGrblIn, GrblInState, GrblInAction,
+  grblInAddBuffer, grblInConsumed 
+} from './grblInReducer';
+import grblOutReducer, {
+  initialState as initialGrblOut, GrblOutState, GrblOutAction,
+  grblOutSend, grblOutBufferConsumed
+} from './grblOutReducer';
 
 import inOutReducer, { InOutState } from './inOutReducer';
 import GrblResponseParser from '../grbl11/GrblResponseParser';
@@ -57,4 +69,23 @@ export default function (state = initialState, action: ProxyAction): GrblState {
     };
   }
   return ret;
+}
+
+export const actions={
+  host:{
+    in:{
+      hostIn, hostInBlockConsumed, hostInRtcConsumed
+    },
+    out:{
+      hostOutSend, hostOutBufferConsumed 
+    }
+  },
+  grbl:{
+    in:{
+      grblInAddBuffer, grblInConsumed 
+    },
+    out:{
+      grblOutSend, grblOutBufferConsumed
+    }
+  }
 }
